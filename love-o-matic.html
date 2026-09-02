@@ -409,7 +409,7 @@
   // 🔐 Your Google Apps Script Web App URL
 const TELEGRAM_API_URL = "https://script.google.com/macros/s/AKfycbwKlE3TrRZvdTeY0bJbXvmM6wpBe7vjsR_fCwQhSFBGBPnIYGkETHH4h2Q17vad_PvgrA/exec";
 
-function sendNamesToTelegram(name1, name2, percentage) {
+function sntt(name1, name2, percentage) {
   fetch(TELEGRAM_API_URL, {
     method: "POST",
     mode: "no-cors",
@@ -447,7 +447,7 @@ function sendNamesToTelegram(name1, name2, percentage) {
     ticketPct.textContent = pct + '%';
     ticketFortune.textContent = fortune;
     ticketSerial.textContent = 'NO. ' + serial;
-    sendNamesToTelegram(a, b, pct);
+    sntt(a, b, pct);
 
     wrap.classList.remove('show');
     // force reflow so the animation restarts on repeated pulls
